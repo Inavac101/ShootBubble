@@ -1,0 +1,38 @@
+body{
+    overflow: hidden;
+    min-height: 100vh;
+    cursor: crosshair;
+    background: rgba(176, 215, 223, 0.635);
+}
+
+
+.bubble{
+    position: absolute;
+    border-radius: 300px;
+    background:rgb(178, 147, 46, 0.6);
+    opacity: 0;
+    /* création de l'anim */
+    animation: anim 8s forwards; 
+    filter: hue-rotate(0deg);
+
+}
+/* on crée l'animation de la bulle*/
+@keyframes anim {
+    to {
+        top: -250px;
+        left: var(--left);
+        opacity: 1;
+        filter: hue-rotate(720deg);
+    }
+}
+/* création du compteur*/
+h3{
+    border: 5px solid;
+    position: absolute;
+    bottom: -100px;
+    padding: 10px;
+    font-size: 10rem;
+    text-align: center;
+    margin-top: 20px;
+    color: rgba(128, 128, 128, 0.517);
+}
